@@ -61,9 +61,14 @@
                 <div class="modal">  
                 <button class="close" data-modal-close><svg class="icon" width="11" height="11"><use href="./images/icons.svg#icon-Vector"></use> </svg></button>
                 <form name="form-call" class="modal-form">
-                    <input name="user-name" type="text" class="modal-input"/>
-                    <input name="user-tel" type="text" class="modal-input"/>
-                    <input name="user-mail" type="text" class="modal-input"/>
+                    <label for="user-name" class="modal-label">Ім'я</label>
+                    <input name="user-name" id="user-name" type="text" placeholder="" class="modal-input"/>
+                    <label for="user-tel" class="modal-label">Телефон</label>
+                    <input name="user-tel" id="user-tel" type="text" class="modal-input"/>
+                    <label for="user-mail" class="modal-label">Пошта</label>
+                    <input name="user-mail" id="user-mail" type="text" class="modal-input"/>
+                    <label for="comment" class="modal-label">Коментар</label>
+                    <textarea name="comment" id="comment"rows="" placeholder="Введіть текст"></textarea>
                 <button type="submit" class="button" >Відправити</button>
                 </form></div>
             </div>
