@@ -757,7 +757,6 @@ font-weight: 400;
 
 }
 .modal-input{
-    position: relative;
     width: 100%;
     height: 40px;
     margin-bottom: 10px;
@@ -769,7 +768,6 @@ font-weight: 400;
     font-weight: bold;
 }
 .icon-modal{
-    position: absolute;
     left: 15px;
     top: 14px;
 }
@@ -893,7 +891,7 @@ border: 1px solid #2196F3;
     display: flex;
 
 }
-.footer-button .icon{
-
+.footer-button.icon{
+fill: currentColor;
 
 }
