@@ -708,7 +708,6 @@ cursor: pointer;
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
     width: 528px;
-    height: 581px;
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -751,7 +750,7 @@ font-weight: 400;
 .modal-form{
     display: flex;
         flex-direction: column;
-        align-items: center;
+
     padding-left: 40px;
     padding-right: 40px;
 
@@ -766,16 +765,20 @@ font-weight: 400;
     font-size: 12px;
     color: var(--title-text-color);
     font-weight: bold;
+    padding-left: 42px;
 }
 .icon-modal{
-    left: 15px;
-    top: 14px;
+    position: absolute;
+    left: 12px;
+        top: 55%;
+        transform: translateY(-50%);
+
 }
 .modal .button{
+    display: block;
     font-weight: 700;
         font-size: 16px;
         line-height: 1.87;
-        display: flex;
         align-items: center;
         text-align: center;
         letter-spacing: 0.06em;
@@ -783,6 +786,10 @@ font-weight: 400;
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
 }
 .modal .button:hover,
 .modal .button:focus{
@@ -813,9 +820,12 @@ font-weight: 700;
     margin-bottom: 12px;
 }
 .inputs {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    justify-content: flex-start;
+
 }
 .check{
     display: flex;
@@ -829,7 +839,7 @@ font-weight: 400;
     letter-spacing: 0.03em;
     color:var(--primary-text-color);
 }
-.checkbox-text a{
+.checkbox-agree a{
     font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
@@ -837,18 +847,19 @@ font-weight: 400;
         text-decoration-line: underline;
     color: var(--accent-color);
 }
+.modal-input:hover ~ .icon-modal,
+.modal-input:focus ~ .icon-modal{
+fill: var(--accent-color);
+}
 .modal-input:hover,
-.modal-input:focus{
+.modal-input:focus {
 border: 1px solid #2196F3;
 }
 .modal-textarea:hover,
 .modal-textarea:focus{
 border: 1px solid #2196F3;
 }
-.modal-checkbox:hover,
-.modal-checkbox:focus{
 
-}
 /*футер*/
 .footer-input{
     background: #2F303A;
@@ -859,11 +870,17 @@ border: 1px solid #2196F3;
         height: 50px;
         margin-right: 12px;
 }
+.footer-input:hover,
+.footer-input:focus{
+border-color: var(--accent-color);
+}
 .footer-form{
     display: flex;
         flex-direction: column;
         margin-left: 93px;
+
 }
+
 .footer-form p{
     font-style: normal;
         font-weight: 700;
@@ -884,14 +901,42 @@ border: 1px solid #2196F3;
     letter-spacing: 0.06em;
     color: var(--color-white);
     background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     border-radius: 4px;
+    cursor: pointer;
 }
-.email-button{
+.footer-button:hover,
+.footer-button:focus{
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.email-button {
     display: flex;
+}
+
+.footer-button .icon{
+margin-left: 10px;
+}
+/*чекбокс*/
+/*.modal-checkbox{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}*/
+.checkbox-agree{
+    display: flex;
+    align-items: center;
 
 }
-.footer-button.icon{
-fill: currentColor;
-
+.checkbox-agree::before{
+    display: flex;
+    content: " ";
+    width: 16px;
+    height: 15px;
+    background-color: var(--color-white);
+    border: 2px solid #000;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+.modal-checkbox:checked + .checkbox-agree::before{
+background-color: var(--accent-color);
+border: none;
 }
