@@ -569,9 +569,7 @@ footer .footer-list {
 
 .content-link {
     display: block;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: box-shadow 250ms var(--timing-function);
 }
 
 .content-link:hover,
@@ -787,16 +785,15 @@ display: flex;
     letter-spacing: 0.06em;
     color: var(--color-white);
     background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: box-shadow 0px 4px 4px rgba(0, 0, 0, 0.15) 250ms var(--timing-function)
 
 }
 .modal .button:hover,
 .modal .button:focus{
     background: #188CE8;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
 }
 
@@ -826,7 +823,7 @@ font-weight: 700;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
-
+transition: color var(--accent-color) 250ms var(--timing-function), fill var(--accent-color) 250ms var(--timing-function);
 }
 .check{
     display: flex;
@@ -863,6 +860,7 @@ border: 1px solid #2196F3;
         width: 358px;
         height: 50px;
         margin-right: 12px;
+        transition: color var(--accent-color) 250ms var(--timing-function);
 }
 .footer-input:hover,
 .footer-input:focus{
@@ -897,6 +895,7 @@ border-color: var(--accent-color);
     background: var(--accent-color);
     border-radius: 4px;
     cursor: pointer;
+    transition: box-shadow 0px 4px 4px rgba(0, 0, 0, 0.15) 250ms var(--timing-function)
 }
 .footer-button:hover,
 .footer-button:focus{
