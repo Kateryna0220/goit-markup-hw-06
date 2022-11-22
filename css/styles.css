@@ -711,6 +711,7 @@ cursor: pointer;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms var(--timing-function);
+    padding: 40px;
 }
 
 .close{
@@ -724,6 +725,11 @@ cursor: pointer;
     border-radius: 50%;
     fill: var(--title-text-color);
     cursor: pointer;
+    transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
+}
+.close:hover,
+.close:focus{
+fill: var(--accent-color);
 }
 /*розмітка модального вікна*/
 
@@ -737,6 +743,7 @@ cursor: pointer;
     color: var(--title-text-color);
     font-weight: bold;
     padding: 12px 16px;
+    transition: color var(--accent-color) 250ms var(--timing-function);
 }
 ::placeholder{
 font-weight: 400;
@@ -749,10 +756,6 @@ font-weight: 400;
 .modal-form{
     display: flex;
         flex-direction: column;
-padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-
 }
 .modal-input{
     width: 100%;
@@ -765,13 +768,14 @@ padding-bottom: 40px;
     color: var(--title-text-color);
     font-weight: bold;
     padding-left: 42px;
+    transition: color var(--accent-color) 250ms var(--timing-function);
 }
 .icon-modal{
     position: absolute;
     left: 12px;
         top: 55%;
         transform: translateY(-50%);
-
+transition: fill var(--accent-color) 250ms var(--timing-function);
 }
 .modal .button{
 display: flex;
@@ -808,7 +812,7 @@ display: flex;
         letter-spacing: 0.01em;
         color: var(--primary-text-color);
 }
-.modal-h3 {
+.modal-p {
     display: block;
 font-weight: 700;
     font-size: 20px;
@@ -816,15 +820,13 @@ font-weight: 700;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
-    padding-top: 40px;
     margin-bottom: 12px;
 }
 .inputs {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
-transition: color var(--accent-color) 250ms var(--timing-function), fill var(--accent-color) 250ms var(--timing-function);
+    margin-bottom: 10px;
 }
 .check{
     display: flex;
@@ -870,11 +872,14 @@ border: 1px solid #2196F3;
 .footer-input:focus{
 border-color: var(--accent-color);
 }
+
 .footer-form{
     display: flex;
         flex-direction: column;
-        margin-left: 93px;
 
+}
+.footers-form{
+    margin-left: auto;
 }
 
 .footer-form p{
@@ -888,7 +893,6 @@ border-color: var(--accent-color);
         margin-bottom: 20px;
 }
 .footer-button{
-    display: flex;
     align-items: center;
     text-align: center;
     font-weight: 700;
@@ -900,6 +904,7 @@ border-color: var(--accent-color);
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    width: 200px;
     transition: box-shadow 0px 4px 4px rgba(0, 0, 0, 0.15) 250ms var(--timing-function)
 }
 .footer-button:hover,
@@ -913,6 +918,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 .footer-button .icon{
 margin-left: 10px;
 }
+
 /*чекбокс*/
 .modal-form-checkbox {
 position: absolute;
